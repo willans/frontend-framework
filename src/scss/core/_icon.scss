@@ -1,0 +1,53 @@
+$icon-size: 1em;
+
+// basic icon
+// <svg class="icon"><use xlink:href="/assets/img/sprite.svg#chevron-up"></use></svg>
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	vertical-align: top;
+	width: $icon-size;
+	height: $icon-size;
+
+	&--inline {
+		// y = line-height measurment was taken at
+		// x =  how far off centre the baseline is, at `y`
+		$x: 10;
+		$y: 90;
+		vertical-align: n($x/$y * 100%);
+	}
+}
+
+
+// text with set position icon
+// <span class="icon-text"><svg class="icon-text__i"></svg> <span class="icon-text__t"></span></span>
+// <span class="icon-text"><span class="icon-text__t"></span> <svg class="icon-text__i"></svg></span>
+
+.icon-text {
+	display: inline-block;
+	position: relative;
+
+	&__i {
+		width: $icon-size;
+		height: $icon-size;
+		position: absolute;
+		top: 50%; right: 0;
+		transform: translateY(-50%);
+
+		&:first-child {
+			right: auto; left: 0;
+		}
+	}
+
+	&__t {
+		padding-right: $icon-size + .3em;
+
+		&:last-child {
+			padding: {
+				right: 0;
+				left: $icon-size + .3em;
+			}
+		}
+	}
+}

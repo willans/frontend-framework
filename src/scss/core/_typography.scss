@@ -1,0 +1,138 @@
+/*--------------------------------
+
+	Basic, low level typography
+
+*/
+
+$typography-elems:
+	'p',
+	'ul',
+	'ol';
+
+$media-elems:
+	'.blockquote',
+	'.button-wrapper',
+	'.media',
+	'.table-wrapper';
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	@include content-margins('&');
+	font-family: $stack--heading;
+	font-weight: $w--bold;
+	line-height: 1;
+	margin-top: .8em;
+
+	a {
+		font-weight: $w--bold;
+	}
+}
+
+.h1 {
+	font-size: $h--large;
+	line-height: 1;
+
+	@include mq('tablet') {
+		font-size: $h--x-large;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--xxx-large;
+	}
+}
+
+.h2 {
+	font-size: $h--medium;
+
+	@include mq('tablet') {
+		font-size: $h--large;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--xx-large;
+	}
+}
+
+.h3 {
+	font-size: $h--small;
+
+	@include mq('tablet') {
+		font-size: $h--medium;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--x-large;
+	}
+}
+
+.h4 {
+	font-size: $h--x-small;
+
+	@include mq('tablet') {
+		font-size: $h--small;
+	}
+
+	@include mq('desktop') {
+		font-size: $h--medium;
+	}
+}
+
+.h5 {
+	font-size: $h--xx-small;
+
+	@include mq('tablet') {
+		font-size: $h--x-small;
+	}
+}
+
+.h6 {
+	font-size: $h--xxx-small;
+
+	@include mq('tablet') {
+		font-size: $h--xx-small;
+	}
+}
+
+
+// Basic typography styling
+
+#{$typography-elems},
+#{$media-elems} {
+	margin-top: 1.25em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+
+// Stylistic elements
+
+b,
+strong {
+	font-weight: $w--bold;
+}
+
+small {
+	font-size: 80%;
+}

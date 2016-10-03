@@ -1,0 +1,22 @@
+.breadcrumb {
+	@include cf;
+	line-height: $lh--small;
+
+	a,
+	.icon,
+	span {
+		display: inline-block;
+		margin-right: rem(5px);
+		vertical-align: top;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.icon {
+		$x: 3;
+		$y: 20;
+		vertical-align: n($x/$y * 100%);
+	}
+}

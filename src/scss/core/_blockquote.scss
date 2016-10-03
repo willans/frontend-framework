@@ -1,0 +1,42 @@
+.blockquote {
+	max-width: 45em;
+	position: relative;
+
+	p {
+		@include push--bottom(.4em);
+		font-size: $p--medium;
+		line-height: $lh--large;
+
+		@include mq('tablet-small') {
+			font-size: $p--large;
+		}
+	}
+
+	cite {
+		font-size: $p--small;
+
+		@include mq('tablet-small') {
+			font-size: $p;
+		}
+	}
+
+	&--left,
+	&--right {
+		max-width: 50%;
+	}
+
+	&--left {
+		@include soft--right;
+		float: left;
+	}
+
+	&--right {
+		@include soft--left;
+		float: right;
+	}
+
+	&--centre {
+		@include push--auto;
+		text-align: center;
+	}
+}

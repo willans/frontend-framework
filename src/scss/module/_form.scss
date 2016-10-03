@@ -1,0 +1,25 @@
+// lists & groupings
+
+.fields-list {
+	> * {
+		margin-top: $spacing-unit--small;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.fields-list-inline {
+	margin-top: n($spacing-unit--small);
+
+	> * {
+		margin-top: $spacing-unit--small;
+		margin-right: $spacing-unit--small;
+		display: inline-block;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

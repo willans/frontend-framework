@@ -1,0 +1,68 @@
+// basic buttons
+
+.button {
+	background-color: $c--brand-primary;
+	color: $c--white;
+	font-family: $stack;
+	font-size: $p;
+	font-weight: $w--normal;
+	padding: rem(17px);
+	position: relative;
+	text-decoration: none;
+
+	&.is-focused {
+		box-shadow: 0px 0px 3px $c--blue, 0px 0px 6px $c--blue;
+	}
+
+	&:active {
+		top: 4px;
+	}
+
+	&[disabled] {
+		&,
+		&:focus {
+			background-color: $c--grey-light;
+			color: mix($c--grey-light, $c--black, 60%);
+		}
+	}
+}
+
+
+// colours
+
+.button--secondary {
+	background-color: $c--black;
+}
+
+.button--positive {
+	background-color: $c--positive;
+
+	&:focus {
+		background-color: $c--positive;
+	}
+}
+
+.button--negative {
+	background-color: $c--negative;
+
+	&:focus {
+		background-color: $c--negative;
+	}
+}
+
+
+// sizes
+
+.button--large {
+	padding: rem(22px) rem(30px);
+
+	@include mq('tablet') {
+		padding: 25px 40px;
+		font-size: $p--medium;
+	}
+}
+
+.button--small {
+	font-size: $p--small;
+	padding: rem(12px);
+}
