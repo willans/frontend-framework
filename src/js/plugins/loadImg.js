@@ -9,6 +9,8 @@
  *  @return {Object}	The originally targeted object
  */
 
+require('./preload');
+
 $.fn.loadImg = function(){
 
 	this.each(function(){

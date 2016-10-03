@@ -36,30 +36,21 @@
       "extensions": [
         "js"
       ],
-      "files": [
-        {
-          "name": "site",
-          "src": [
-            "core",
-            "modules/*",
-            "pages/*"
-          ],
-          "lint": true
-        },
-        {
-          "name": "plugins",
-          "src": [
-            "**/*"
-          ],
-          "lint": false
-        },
-        {
-          "name": "libs",
-          "src": [
-            "**/*"
-          ],
-          "lint": false
-        }
+      "entries": [
+        "*"
+      ],
+      "featureDetects": [
+        "canvas",
+        "css/animations",
+        "css/pointerevents",
+        "css/transforms",
+        "css/transforms3d",
+        "css/transitions",
+        "css/transformstylepreserve3d",
+        "requestanimationframe",
+        "svg",
+        "touchevents",
+        "video"
       ]
     },
     "images": {
