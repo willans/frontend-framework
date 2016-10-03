@@ -97,6 +97,14 @@
       "dest": "static",
       "extensions": [
         "*"
+      ],
+      "npm": [
+        {
+          "dest": "js",
+          "src": [
+            "jquery/dist/jquery.min.js"
+          ]
+        }
       ]
     },
     "watch": {
